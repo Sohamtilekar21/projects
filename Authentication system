@@ -1,0 +1,39 @@
+
+
+while True :
+    print("Sign up")
+    a=(input("Enter your username  :"))
+    b=(input("Enter your password  :"))
+    while len(b)!= 8:
+        print("Strong password must be of atleast 8 charecters")
+        b=0
+        b=input("Enter your password")
+    c=(input("Confirm your password :"))
+    creden={}
+    if b==c:
+        if a in creden:
+            print("login")
+            p=input("Enter your username :")
+            z=creden.get(p)
+            q=input("Enter your password :")
+            if b==q:
+                print("Successful login")
+                break
+            else :
+                print("Invalid Credentials")
+                break
+        else:
+            d={a:b}
+            creden=creden.update(d)
+            print("login")
+            m=input("Enter your username :")
+            z=(d.get(a))
+            q=(input("Enter your password :"))
+            if b==q and m==a :
+                print("Successful login")
+                break
+            else :
+                print("Invalid Credentials")
+                break
+    else:
+        print("Enter same password")
