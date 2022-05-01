@@ -1,0 +1,18 @@
+from tkinter import *
+root=Tk()
+root.title("PAINT APP")
+root.geometry("300x250")
+
+def paint(event):
+  x1,y1,x2,y2=(event.x-3),(event.y-3),(event.x+3),(event.y+3)
+  colour="Orange"
+  w.create_line(x1,y1,x2,y2,fill=colour)
+
+w=Canvas(root,width=280,height=220)
+w.bind("<B1-Motion>",paint)
+
+l=Label(root,text="Double Click and drag to draw")
+l.pack()
+w.pack()
+
+root.mainloop()
