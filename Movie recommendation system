@@ -1,0 +1,23 @@
+from random import choice
+print("Movie Recommendations")
+Action=["Mission Impossible","Avengers","Harry Potter"]
+Comedy=["Charlie Chaplin","Jumanji","Red Notice"]
+Romantic=["The Notebook","Titanic","The Fault in our stars","Cinderlla"]
+while True:
+    print("Which Genre do you want to watch ?")
+    a=int(input("Enter 1 for Action , 2 for Comedy , 3 for Romantic"))
+    if a==1:
+        b=choice(Action)
+        print(b)
+        break
+    elif a==2:
+        b=choice(Comedy)
+        print(b)
+        break
+    elif a==3:
+        b=choice(Romantic)
+        print(b)
+        break
+    else:
+        print("choose valid genre")
+    
