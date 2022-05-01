@@ -1,0 +1,92 @@
+print("Best restaurants near you")
+print("choose your location :")
+while True:
+    print("Choose 1 for pune , 2 for mumbai and 3 for rajasthan")
+    a=int(input("Enter your number :"))
+    if a==1:
+        res1={"Name":"P K Biryani House","Rating":"4.5","Mode of travel":"Car or bike","Timings":"9am to 10pm","contact number":"1108238123","Email":"","Reviews":{
+            "Rahul":"Really nice restuarant , food is also good",
+            "Priya":"Did not like , not a lot of options for vegetarians"
+            }
+              }
+        res2={"Name":"Aloha Restaurant","Rating":"3","Mode of travel":"Train","Timings":"8am to 6pm","Contact number":"1348435985","Reviews":{
+            "Rohan":"Nice place , but very busy",
+            "Ajit":"Bad place for families , did not like "
+            }
+              }
+        for i in (res1.keys()):
+            print(res1[i])
+        print()
+        for i in (res2.keys()):
+            print(res2[i])
+        print("Please choose your restaurant ")
+        print("Choose 1 for PK Biryani house , 2 for Aloha restaurant")
+        b=int(input("Enter your number:"))
+        c={1:"PK Biryani house", 2:"Aloha restaurant"}
+        if b in c:
+            Name=input("Enter your name")
+            mblno=int(input("ENter ypur mobile number"))
+            ppl=int(input("Enter number of peolple coming to eat"))
+            print("Your reservation has been confirmed at",c[b])
+            break
+        else:
+            print("choose valid restaurant")
+    elif a==2:
+        res1={"Name":"Swayam","Rating":"4.5","Mode of travel":"Car or bike","Timings":"9am to 10pm","contact number":"1108238123","Email":"","Reviews":{
+            "Rahul":"Really nice restuarant , food is also good",
+            "Priya":"Did not like , not a lot of options for vegetarians"
+            }
+              }
+        res2={"Name":"FamilyGuy Restaurant","Rating":"3","Mode of travel":"Train","Timings":"8am to 6pm","Contact number":"1348435985","Reviews":{
+            "Rohan":"Nice place , but very busy",
+            "Ajit":"Bad place for families , did not like "
+            }
+              }
+        for i in (res1.keys()):
+            print(res1[i])
+        print()
+        for i in (res2.keys()):
+            print(res2[i])
+        print("Please choose your restaurant ")
+        print("Choose 1 for Swayam , 2 for FamilyGuy restaurant")
+        b=int(input("Enter your number:"))
+        c={1:"Swayam", 2:"FamilyGuy restaurant"}
+        if b in c:
+            Name=input("Enter your name")
+            mblno=int(input("ENter ypur mobile number"))
+            ppl=int(input("Enter number of peolple coming to eat"))
+            print("Your reservation has been confirmed at",c[b])
+            break
+        else:
+            print("choose valid restaurant")
+    elif a==3:
+        res1={"Name":"Dinnerbone Brunch","Rating":"4.5","Mode of travel":"Car or bike","Timings":"7am to 10pm","contact number":"1108238123","Email":"","Reviews":{
+            "Rahul":"Really nice restuarant , food is also good",
+            "Priya":"Did not like , not a lot of options for vegetarians"
+            }
+              }
+        res2={"Name":"JW Restaurant","Rating":"3","Mode of travel":"Train","Timings":"8am to 3pm","Contact number":"1348435985","Reviews":{
+            "Rohan":"Nice place , but very busy",
+            "Ajit":"Bad place for families , did not like "
+            }
+              }
+        for i in (res1.keys()):
+            print(res1[i])
+        print()
+        for i in (res2.keys()):
+            print(res2[i])
+        print("Please choose your restaurant ")
+        print("Choose 1 for DinnerBone , 2 for JW restaurant")
+        b=int(input("Enter your number:"))
+        c={1:"dinnerbone brunch", 2:"JW restaurant"}
+        if b in c:
+            Name=input("Enter your name")
+            mblno=int(input("ENter ypur mobile number"))
+            ppl=int(input("Enter number of peolple coming to eat"))
+            print("Your reservation has been confirmed at",c[b])
+            break
+        else:
+            print("choose valid restaurant")
+        
+    else:
+        print("Choose valid location")
