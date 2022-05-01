@@ -1,0 +1,55 @@
+print("Quiz Game")
+def new_game():
+    guesses=[]
+    
+    correct_ans=0
+    ques_num=1
+    for key in ques:
+        print("")
+        print(key)
+        for i in opt[ques_num-1]:
+            print(i)
+        ans=input("Enter A , B , C or D :  ")
+        ans=ans.upper()
+        guesses.append(ans)
+
+        correct_ans+=check_ans(ques.get(key),ans)
+        ques_num+=1
+    view_score(correct_ans,guesses)
+
+def check_ans(answer,guess):
+    if answer == guess:
+        print("CORRECT")
+        return 1
+    else:
+        return 0
+
+def view_score(correct_ans,guesses):
+    print("Results")
+    print("Answers :",end="")
+    
+    for i in ques:
+        print(ques.get(i),end=" ")
+    print()
+    j=1
+    while j==1 :
+        print(guesses,end=" ")
+        j+=1
+    print()
+    
+    score=int((correct_ans/len(ques))*100)
+    print("Your score is " + str(score) + "%")
+
+ques={
+    "Who is the richest man alive ? : " : "A",
+    "Who is the Prime minister of India ? : " : "C",
+    "Which is the bigggest country according to Landmass ? : " : "D",
+    "Does the equator pass through India ? : " : "A"
+    }
+
+opt=[["A.Elon Musk","B.Jeff Bezos","C.Warren Buffet","D.Bill Gates"],
+     ["A.Rahul Gandhi","B.Manmohan Singh","C.Narendra Modi","D.Mahatma Gandhi"],
+     ["A.China","B.India","C.Australia","D.Russia"],
+     ["A.Yes","B.No","C.Maybe","D.IDK"]]
+
+new_game()
