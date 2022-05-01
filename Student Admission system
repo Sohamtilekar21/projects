@@ -1,0 +1,60 @@
+def a() :
+    global fn
+    global colpre
+    fn=input("Enter your fathers name")
+    colpre=input("Enter your prefered college")
+    
+print("Admission system")
+Name=input("Enter your name :")
+Sch=input("Enter your school name :")
+Place=input("Enter yout residing area :")
+marks=float(input("Enter your Marks in percentage:"))
+if marks<80 and marks:
+    print("We recommend arts stream")
+    print("choose 3 for arts :")
+    choice=int(input("Enter your choice :"))
+    if choice ==3:
+        stream="Arts"
+        print(a())
+    else:
+        print("invalid stream")
+elif marks<90 and marks>80:
+    print("we recommend commerce stream")
+    print("choose 2 for commeerce and 3 for arts :")
+    choice=int(input("Enter your choice :"))
+    
+    if choice ==2:
+        stream="Commerce"
+        print(a())
+    elif choice ==3:
+        stream="Arts"
+        print(a())
+    else:
+        print("invalid stream")
+elif marks<100 and marks>90:
+    print("We recommend science stream")
+    print("choose 1 for science , 2 for commeerce and 3 for arts :")
+    choice=int(input("Enter your choice :"))
+    if choice ==1:
+        stream="Science"
+        print(a())
+    elif choice ==2:
+        stream="Commerce"
+        print(a())
+    elif choice ==3:
+        stream="Arts"
+        print(a())
+    else:
+        print("invalid stream")
+print("this is all updated student info:")
+print("name :",Name)
+print("school :",Sch)
+print("area :",Place)
+print("marks :",marks)
+print("stream :",stream)
+print("Fathers name :",fn)
+print("College preference :" ,colpre)
+   
+
+    
+    
